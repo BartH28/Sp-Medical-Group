@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using senai_SpMedicalGruop.Contexts;
 using senai_SpMedicalGruop.Domains;
 using senai_SpMedicalGruop.Interfaces;
@@ -15,13 +16,13 @@ namespace senai_SpMedicalGruop.Repositories
         readonly SpMGContext ctx = new();
         public void Atualizar(int idMedico, Medico MedicoAtualizado)
         {
-            Medico MedicoBuscado = ctx.Medicos.Find(idMedico);
+            Medico MedicoBuscado = ctx.Medicos.Find(Convert.ToInt16(idMedico));
 
             if (MedicoAtualizado.Nome != null)
             {
                 MedicoBuscado.Nome = MedicoAtualizado.Nome;
-                MedicoBuscado.Email = MedicoAtualizado.Email;
-                MedicoBuscado.Senha = MedicoAtualizado.Senha;
+                //MedicoBuscado.Email = MedicoAtualizado.Email;
+                //MedicoBuscado.Senha = MedicoAtualizado.Senha;
 
                 ctx.Medicos.Update(MedicoBuscado);
 
@@ -31,7 +32,24 @@ namespace senai_SpMedicalGruop.Repositories
 
         public Medico BuscarPorId(int idMedico)
         {
-            return ctx.Medicos.FirstOrDefault(e => e.IdMedico == idMedico);
+            return ctx.Medicos.Select(m => new Medico()
+            {
+                IdMedico = m.IdMedico,
+                Nome = m.Nome,
+                Email = m.Email,
+                IdEspecialidade = m.IdEspecialidade,
+
+                IdEspecialidadeNavigation = new Especialidade()
+                {
+                    NomeEscpecialidade = m.IdEspecialidadeNavigation.NomeEscpecialidade
+                },
+
+                IdClinicaNavigation = new Clinica()
+                {
+                    NomeFantasia = m.IdClinicaNavigation.NomeFantasia
+                }
+
+            }).FirstOrDefault(e => e.IdMedico == idMedico);
         }
 
         public void Cadastrar(Medico novoMedico)
@@ -66,8 +84,26 @@ namespace senai_SpMedicalGruop.Repositories
 
         public List<Medico> Listar()
         {
-            return ctx.Medicos.ToList(); 
+            return ctx.Medicos.Select(m => new Medico()
+            {
+                IdMedico = m.IdMedico,
+                Nome = m.Nome,
+                Email = m.Email,
+                IdEspecialidade = m.IdEspecialidade,
+
+                IdEspecialidadeNavigation = new Especialidade()
+                {
+                    NomeEscpecialidade = m.IdEspecialidadeNavigation.NomeEscpecialidade
+                },
+
+                IdClinicaNavigation = new Clinica()
+                {
+                    NomeFantasia = m.IdClinicaNavigation.NomeFantasia
+                }
+
+            }).ToList();
         }
+        
 
         public Medico Login(string email, string senha)
         {

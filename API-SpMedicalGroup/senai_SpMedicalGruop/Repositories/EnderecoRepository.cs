@@ -13,7 +13,7 @@ namespace senai_SpMedicalGruop.Repositories
         readonly SpMGContext ctx = new();
         public void Atualizar(int idEndereco, Endereco EnderecoAtualizado)
         {
-            Endereco EnderecoBuscado = ctx.Enderecos.Find(idEndereco);
+            Endereco EnderecoBuscado = ctx.Enderecos.Find(Convert.ToInt16(idEndereco));
 
             if (EnderecoAtualizado.RuaAvenida != null && EnderecoAtualizado.Numero != null && EnderecoAtualizado.Cep != null)
             {

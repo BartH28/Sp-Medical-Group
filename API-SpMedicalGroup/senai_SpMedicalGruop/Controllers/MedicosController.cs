@@ -26,49 +26,47 @@ namespace senai_SpMedicalGruop.Controllers
             _medicoRepository = new MedicoRepository();
         }
 
-        [HttpPost("Login")]
-        public IActionResult Login(LoginViewModel login)
+        [Authorize(Roles = "1")]
+        [HttpGet]
+        public IActionResult Listar()
         {
-            try
-            {
-                Medico medicoBuscado = _medicoRepository.Login(login.Email, login.Senha);
-                if (medicoBuscado == null)
-                    return NotFound("Email ou Senha invalidos");
-
-                var minhasClaims = new[]
-            {
-                new Claim(JwtRegisteredClaimNames.Email, medicoBuscado.Email),
-                new Claim(JwtRegisteredClaimNames.Jti, medicoBuscado.IdMedico.ToString()),
-                new Claim(ClaimTypes.Role, medicoBuscado.IdMedico.ToString())
-            };
-                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("SPMedico-Authentication-Key"));
-
-                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-                var meuToken = new JwtSecurityToken(
-                        issuer: "SpMG.webAPI",
-                        audience: "SpMG.webAPI",
-                        claims: minhasClaims,
-                        expires: DateTime.Now.AddMinutes(50),
-                        signingCredentials: creds
-                    );
-                return Ok(new
-                {
-                    token = new JwtSecurityTokenHandler().WriteToken(meuToken)
-                });
-
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            return Ok(_medicoRepository.Listar());
         }
 
-        [Authorize(Roles = " adminstrador")]
+        [Authorize(Roles = "1")]
         [HttpGet("{idMedico}")]
         public IActionResult BuscarPorId(int idMedico)
         {
-            // Retorna um estúdio encontrado
             return Ok(_medicoRepository.BuscarPorId(idMedico));
         }
+
+        [Authorize(Roles = "1")]
+        [HttpPost]
+        public IActionResult Cadastrar(Medico novoMedico)
+        {
+            _medicoRepository.Cadastrar(novoMedico);
+
+            return StatusCode(201);
+        }
+
+
+        [Authorize(Roles = "1")]
+        [HttpPut("{idMedico}")]
+        public IActionResult Atualizar(int idMedico, Medico MedicoAtualizado)
+        {
+            _medicoRepository.Atualizar(idMedico, MedicoAtualizado);
+
+            return StatusCode(204);
+        }
+
+        [Authorize(Roles = "1")]
+        [HttpDelete("{idMedico}")]
+        public IActionResult Deletar(int idMedico)
+        {
+            _medicoRepository.Deletar(idMedico);
+
+            return StatusCode(204);
+        }
+
     }
 }

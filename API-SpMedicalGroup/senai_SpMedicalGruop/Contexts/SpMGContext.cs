@@ -32,7 +32,7 @@ namespace senai_SpMedicalGruop.Contexts
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-PVCFVR0\\SQLEXPRESS; initial catalog=SP_MEDICAL_GROUP; user Id=sa; pwd=senai@132;");
+                optionsBuilder.UseSqlServer("Server=tcp:spmedicalgroupbart.database.windows.net,1433;Initial Catalog=SP_MEDICAL_GROUP;Persist Security Info=False;User ID=spmedicaladm;Password=Senai@132;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
@@ -193,6 +193,10 @@ namespace senai_SpMedicalGruop.Contexts
 
                 entity.Property(e => e.IdEspecialidade).HasColumnName("idEspecialidade");
 
+                entity.Property(e => e.IdTipoUsuario)
+                    .HasColumnName("idTipoUsuario")
+                    .HasDefaultValueSql("((3))");
+
                 entity.Property(e => e.Nome)
                     .IsRequired()
                     .HasMaxLength(50)
@@ -212,6 +216,11 @@ namespace senai_SpMedicalGruop.Contexts
                     .WithMany(p => p.Medicos)
                     .HasForeignKey(d => d.IdEspecialidade)
                     .HasConstraintName("FK__MEDICO__idEspeci__49C3F6B7");
+
+                entity.HasOne(d => d.IdTipoUsuarioNavigation)
+                    .WithMany(p => p.Medicos)
+                    .HasForeignKey(d => d.IdTipoUsuario)
+                    .HasConstraintName("FK__MEDICO__idTipoUs__02084FDA");
             });
 
             modelBuilder.Entity<Situacao>(entity =>

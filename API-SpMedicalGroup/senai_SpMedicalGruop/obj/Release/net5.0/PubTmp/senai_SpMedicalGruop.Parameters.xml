@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="SpmedicalGroup-webAPI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\ModelagemSPMedicalGroup\\API-SpMedicalGroup\\senai_SpMedicalGruop\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

@@ -13,5 +13,12 @@ namespace senai_SpMedicalGruop.Interfaces
         void Agendar(Consultum Consulta);
 
         void CancelarConsulta(int idConsulta, string status);
+
+        void MudarDesc(int idConsulta, string descri);
+
+        List<Consultum> ListarMinhasMed(int idMedico);
+
+        List<Consultum> ListarTodos();
+        Consultum BuscarPorId(int idConsulta);
     }
 }

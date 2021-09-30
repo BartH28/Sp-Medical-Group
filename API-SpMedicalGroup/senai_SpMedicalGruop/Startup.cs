@@ -52,10 +52,10 @@ namespace senai_SpMedicalGruop
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("SPMG-AUTHENTICATION-KEY")),
-                        ClockSkew = TimeSpan.FromMinutes(30),
-                        ValidIssuer = "SpMedicalGroup.webAPI",
-                        ValidAudience = "SpMedicalGroup.webAPI"
+                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("SPMedico-Authentication-Key")),
+                        ClockSkew = TimeSpan.FromMinutes(50),
+                        ValidIssuer = "SpMG.webAPI",
+                        ValidAudience = "SpMG.webAPI"
                     };
                 });
         }

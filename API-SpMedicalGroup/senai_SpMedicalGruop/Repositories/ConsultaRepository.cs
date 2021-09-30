@@ -23,6 +23,11 @@ namespace senai_SpMedicalGruop.Repositories
             
         }
 
+        public Consultum BuscarPorId(int _idConsulta)
+        {
+            return ctx.Consulta.FirstOrDefault(e => e.IdConsulta == _idConsulta);
+        }
+
         public void CancelarConsulta(int idConsulta, string status)
         {
             Consultum ConsultaBuscada = ctx.Consulta
@@ -52,6 +57,22 @@ namespace senai_SpMedicalGruop.Repositories
             ctx.SaveChanges();
         }
 
+        public void MudarDesc(int idConsulta, string descri)
+        {
+            Consultum ConsultaBuscada = ctx.Consulta
+               .FirstOrDefault(p => p.IdConsulta == idConsulta);
+
+
+
+            ConsultaBuscada.Descricao = descri;
+
+            ctx.Consulta.Update(ConsultaBuscada);
+
+            ctx.SaveChanges();
+        }
+
+
+
         public List<Consultum> ListarMinhas(int idUsuario)
         {
             return ctx.Consulta
@@ -60,6 +81,23 @@ namespace senai_SpMedicalGruop.Repositories
                 .Include(c => c.IdUsuarioNavigation)
                 .Where(p => p.IdUsuario == idUsuario)
                 .ToList();
+        }
+
+        
+
+        public List<Consultum> ListarTodos()
+        {
+            return ctx.Consulta.ToList();
+        }
+
+        public List<Consultum> ListarMinhasMed(int idMedico)
+        {
+            return ctx.Consulta
+               .Include(c => c.IdMedicoNavigation).ThenInclude(e => e.IdEspecialidadeNavigation)
+               .Include(c => c.IdSituacaoNavigation)
+               .Include(c => c.IdUsuarioNavigation)
+               .Where(p => p.IdMedico == idMedico)
+               .ToList();
         }
     }
 }

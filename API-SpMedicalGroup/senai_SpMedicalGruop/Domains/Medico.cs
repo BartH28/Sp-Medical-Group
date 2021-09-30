@@ -19,9 +19,11 @@ namespace senai_SpMedicalGruop.Domains
         public string Email { get; set; }
         public string Senha { get; set; }
         public string Crm { get; set; }
+        public short? IdTipoUsuario { get; set; }
 
         public virtual Clinica IdClinicaNavigation { get; set; }
         public virtual Especialidade IdEspecialidadeNavigation { get; set; }
+        public virtual TipoDeUsuario IdTipoUsuarioNavigation { get; set; }
         public virtual ICollection<Consultum> Consulta { get; set; }
     }
 }
