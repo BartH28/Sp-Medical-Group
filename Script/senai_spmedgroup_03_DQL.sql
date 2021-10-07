@@ -8,7 +8,7 @@ SELECT * FROM TIPO_DE_USUARIO
 SELECT * FROM USUARIO
 
 
-SELECT USUARIO.Nome as 'Nome Usuario', MEDICO.Nome as 'Nome Medico', DataConsulta, SITUACAO.Descrição FROM CONSULTA
+SELECT USUARIO.Nome as 'Nome Usuario', MEDICO.Nome as 'Nome Medico', convert(varchar, DataConsulta, 113) AS Data, SITUACAO.Descrição FROM CONSULTA
 INNER JOIN USUARIO
 ON USUARIO.idUsuario = CONSULTA.idUsuario
 INNER JOIN MEDICO
