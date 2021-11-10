@@ -9079,19 +9079,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\henri\\.nuget\\packages\\": {}
+    "C:\\Users\\50742583830\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ModelagemSPMedicalGroup\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
+      "projectUniqueName": "C:\\Users\\50742583830\\Documents\\apispmedical\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
       "projectName": "senai_SpMedicalGruop",
-      "projectPath": "D:\\ModelagemSPMedicalGroup\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
-      "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-      "outputPath": "D:\\ModelagemSPMedicalGroup\\API-SpMedicalGroup\\senai_SpMedicalGruop\\obj\\",
+      "projectPath": "C:\\Users\\50742583830\\Documents\\apispmedical\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
+      "packagesPath": "C:\\Users\\50742583830\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\50742583830\\Documents\\apispmedical\\API-SpMedicalGroup\\senai_SpMedicalGruop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\50742583830\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9170,7 +9170,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

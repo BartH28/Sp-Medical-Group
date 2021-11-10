@@ -1,4 +1,4 @@
-USE SP_MEDICAL_GROUP
+USE SP_MEDICAL_GROUP_H
 GO
 
 INSERT INTO ENDERECO(RuaAvenida,Numero,Bairro,Cidade,siglaEstado,CEP)
@@ -33,7 +33,7 @@ VALUES ('Acupultura') ,('Anestesiologia'),('Angiologia'),('Cardiologia'),('Cirur
 GO
 
 INSERT INTO MEDICO(idClinica,idEspecialidade,Nome,Email,Senha,CRM)
-VALUES (2,2,'Ricardo Lemos','ricardo.lemos@spmedicalgroup.com.br','12345678','54356-SP'),(2,17,'Roberto Possarle','roberto.possarle@spmedicalgroup.com.br','12345678','53452-SP'),(2,16,'Helena Strada','helena.souza@spmedicalgroup.com.br','12345678','65463-SP')
+VALUES (1,2,'Ricardo Lemos','ricardo.lemos@spmedicalgroup.com.br','12345678','54356-SP'),(1,17,'Roberto Possarle','roberto.possarle@spmedicalgroup.com.br','12345678','53452-SP'),(1,16,'Helena Strada','helena.souza@spmedicalgroup.com.br','12345678','65463-SP')
 GO
 
 INSERT INTO USUARIO(idTipoUsuario,idEndereco,Nome,Email,Senha,DataNascimento,Telefone, Rg,CPF)
@@ -49,11 +49,13 @@ GO
 
 
 INSERT INTO CONSULTA(idSituacao,idUsuario,idMedico,DataConsulta,Descricao)
-VALUES (1,13,4,'01/20/2020 15:00','Remedio diagnosticado'),
-(2,8,3,'06/01/2020 10:00','Cancelado'),
-(1,9,3,'07/02/2020 11:00','Ultima Sessão Terapeutica'),
-(1,8,3,'06/02/2018 10:00','Diagnostico feito'),
-(2,10,2,'07/02/2019 11:00','Cancelado'),
-(3,13,4,'08/03/2020 15:00','Para consulta'),
-(3,10,2,'09/03/2020 11:00','Para consulta')
+VALUES (1,7,4,'20-01-2020 15:00:00','Remedio diagnosticado'),
+(2,2,3,'01-06-2020 10:00:00','Cancelado'),
+(1,3,3,'07-02-2020 11:00:00','Ultima Sessão Terapeutica'),
+(1,2,3,'06-02-2018 10:00:00','Diagnostico feito'),
+(2,4,2,'07-02-2019 11:00:00','Cancelado'),
+(3,7,4,'03-08-2020 15:00:00','Para consulta'),
+(3,4,2,'03-09-2020 11:00:00','Para consulta')
 GO
+
+truncate TABLE CONSULTA

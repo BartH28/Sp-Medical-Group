@@ -38,6 +38,17 @@ namespace senai_SpMedicalGruop
                 c.IncludeXmlComments(xmlPath);
             });
 
+             services.AddCors(options =>
+                {
+                    options.AddPolicy("CorsPolicy",
+                                    builder =>
+                                    {
+                                        builder.WithOrigins("http://localhost:3000")
+                                        .AllowAnyHeader()
+                                        .AllowAnyMethod();
+                                    });
+                });
+
             services
                 .AddAuthentication(options =>
                 {
@@ -77,6 +88,8 @@ namespace senai_SpMedicalGruop
             });
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
 
