@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\50742583830\\Documents\\apispmedical\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj": {}
+    "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\50742583830\\Documents\\apispmedical\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj": {
+    "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\50742583830\\Documents\\apispmedical\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
+        "projectUniqueName": "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
         "projectName": "senai_SpMedicalGruop",
-        "projectPath": "C:\\Users\\50742583830\\Documents\\apispmedical\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
+        "projectPath": "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
         "packagesPath": "C:\\Users\\50742583830\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\50742583830\\Documents\\apispmedical\\API-SpMedicalGroup\\senai_SpMedicalGruop\\obj\\",
+        "outputPath": "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\50742583830\\AppData\\Roaming\\NuGet\\NuGet.Config",
