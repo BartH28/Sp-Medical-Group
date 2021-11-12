@@ -23,7 +23,7 @@ INSERT INTO SITUACAO(Descrição)
 VALUES ('Realizado'), ('Cancelado'),('Agendado')
 GO
 INSERT INTO TIPO_DE_USUARIO(nomeTipo)
-VALUES ('Administrador'),('Comum')
+VALUES ('Administrador'),('Comum'),('Medico')
 GO
 
 
@@ -32,8 +32,8 @@ INSERT INTO ESPECIALIDADE(NomeEscpecialidade)
 VALUES ('Acupultura') ,('Anestesiologia'),('Angiologia'),('Cardiologia'),('Cirurgia Cardiovascular'),('Cirurgia da Mão'),('Cirurgia do Aparelho Digestivo'),('Cirurgia Geral'),('Cirurgia Pediatrica'),('Cirurgia Plástica'),('Cirurgia Torácica'),('Cirurgia Vascula'),('Dermatologia'),('Radioterapia'),('Urologia'),('Pediatria'),('Psiquiatria')
 GO
 
-INSERT INTO MEDICO(idClinica,idEspecialidade,Nome,Email,Senha,CRM)
-VALUES (1,2,'Ricardo Lemos','ricardo.lemos@spmedicalgroup.com.br','12345678','54356-SP'),(1,17,'Roberto Possarle','roberto.possarle@spmedicalgroup.com.br','12345678','53452-SP'),(1,16,'Helena Strada','helena.souza@spmedicalgroup.com.br','12345678','65463-SP')
+INSERT INTO MEDICO(idClinica,idEspecialidade,idUsuario,Nome,CRM)
+VALUES (1,2,8,'Ricardo Lemos','54356-SP'),(1,17,9,'Roberto Possarle','53452-SP'),(1,16,10,'Helena Strada','65463-SP')
 GO
 
 INSERT INTO USUARIO(idTipoUsuario,idEndereco,Nome,Email,Senha,DataNascimento,Telefone, Rg,CPF)
@@ -43,7 +43,11 @@ VALUES (2, 1,'Ligia', 'ligia@gmail.com','12345678', '1983/10/13','11 3456-7654',
 (2,4, 'Henrique','henrique@gmail.com','12345678','1985/10/13','11 3456-6543','54366362-5','14332654765'),
 (2,5, 'João','joao@hotmail.com','12345678','1975/08/27','11 7656-6377','53254444-1','91305348010'),
 (2,6, 'Bruno','bruno@gmail.com','12345678','1972/03/21','11 95436-8769','54566266-7','79799299004'),
-(2,7, 'Mariana','mariana@outlook.com','12345678','2018/03/05',NULL,'54566266-8','13771913039')
+(2,7, 'Mariana','mariana@outlook.com','12345678','2018/03/05',NULL,'54566266-8','13771913039'),
+(3,5, 'Ricardo Lemos','ricardo.lemos@spmedicalgroup.com.br','12345678','1985/03/05','11 95436-8769','54566267-8','13771913040'),
+(3,2, 'Roberto Possarle','roberto.possarle@spmedicalgroup.com.br','12345678','1979/03/05','11 95436-8769','54566268-8','13771913041'),
+(3,5, 'Helena Strada','helena.souza@spmedicalgroup.com.br','12345678','1990/03/05','11 95436-8769','54566269-8','13771913042'),
+(1,1, 'adm','adm@spmedicalgroup.com.br','12345678','1996/06/06','11 95436-8769','54566203-8','13771944042')
 GO
 
 
