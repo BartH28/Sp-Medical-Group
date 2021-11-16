@@ -17,7 +17,8 @@ main{
 
 .container_main{
     margin-top: 50px;
-    width: 80%;
+    width: 85vw;
+    margin-right: 26vw;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

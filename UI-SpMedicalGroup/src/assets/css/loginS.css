@@ -65,7 +65,11 @@ form{
     align-items: center;
     justify-content: space-between;
     /* margin-bottom: 100px; */
-    scale: 1;
+    /* scale: 1; */
+}
+
+.marginLogmed{
+    margin-top: 20vh;
 }
 
 .container-form-Usuario{
@@ -114,7 +118,7 @@ input:focus{
     cursor: pointer;
 }
 
-.btn_login{
+/* .btn_login{
     margin-top: 50px;
     background-color: var(--azul);
     border-style: none;
@@ -127,7 +131,7 @@ input:focus{
 
 .btn_login:hover{
     background-color:  var(--verde);
-}
+} */
 
 a{
     text-decoration: none;
@@ -152,6 +156,8 @@ span{
     .img-login-U{
         display: none;
     }
+
+    conta
 
     .container-form-Usuario{
         margin: 0px;

@@ -7,7 +7,7 @@ import "../../assets/css/reset.css"
 export default function ConsultasAdm() {
     const [listaConsultas, setLC] = useState([])
     const [listaMed, setMed] = useState([])
-    const [listasituacao, setSitua] = useState([ 1 , 2 , 3])
+    const listasituacao = [1 , 2, 3]
     const [listasipaciente, setpacient] = useState([])
     const [idmedico, setMedico] = useState(0)
     const [idpaciente, setPaciente] = useState(0)

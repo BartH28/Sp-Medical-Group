@@ -70,7 +70,8 @@ body {
     scale: 1.08;
 }
 
-.btn_login {
+.btn_login_H {
+    margin-top: 40px;
     width: 48px;
     height: 17px;
     padding: 9px;
@@ -89,7 +90,7 @@ body {
     margin-right: 40px;
 }
 
-.btn_login:hover {
+.btn_login_H:hover {
     color: var(--verdeEscuro);
     background-color: white;
     scale: 1.08;
@@ -150,3 +151,47 @@ body {
 .disableadm{
     display: none;
 }
+
+.bmBurgerButton {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 65px;
+  }
+
+  .bmBurgerBars {
+    background: #83BEDF
+  }
+
+  .bmCrossButton {
+    height: 24px;
+    width: 24px;
+  }
+
+  .bmCross {
+    background: var(--azul);
+}
+.bmMenuWrap {
+    position: fixed;
+    height: '100%'
+  }
+
+  .bmMenu {
+    background: #83BEDF;
+    padding: 2.5em 1.5em 0;
+    font-Size: 1.15em;
+  }
+
+  .bmOverlay {
+      overflow-x: hidden;  
+      /* background: 'rgba(0, 0, 0, 0.3)'; */
+    }
+
+    .bmMorphShape {
+        fill: #373a47
+    } 
+
+    .react-burger-menu-btn{
+        background: #83BEDF;
+    }

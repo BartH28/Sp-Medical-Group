@@ -4,7 +4,7 @@ import {parseJwt, usuarioAutenticado} from '../../Services/auth'
 
 import '../../assets/css/loginS.css'
 import '../../assets/css/reset.css'
-import imgLogin from '../../assets/img/pexels-jonathan-borba-3259624 1.png'
+// import imgLogin from '../../assets/img/pexels-jonathan-borba-3259624 1.png'
 import imgForm from '../../assets/img/logo_spmedgroup_v1 2.png'
 import { useHistory } from 'react-router-dom'
 // import { isFlowDeclaration } from '@babel/types'
@@ -50,9 +50,9 @@ export default function LoginMed(){
     return(
         <div>
             <main className="main_login">
-                <div className="container-form">
+                <div className="container-form marginLogmed">
                     <img className="logo-form" src={imgForm} alt="logo sp medical group" />
-                    <span className="BemVindo-span">Bem-Vindo,Usuario</span>
+                    <span className="BemVindo-span">Bem-Vindo,Medico</span>
                     <form onSubmit={efetuaLoginMed}>
                         <input type="email" value={email} onChange={(campo) => setEmail(campo.target.value) } placeholder="Email" name="email" id="inp-email" />
                         <input type="password" value={senha} onChange={(campo) => setSenha(campo.target.value) } placeholder="Senha" name="senha" id="inp-password" />

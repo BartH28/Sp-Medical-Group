@@ -32,8 +32,12 @@ INSERT INTO ESPECIALIDADE(NomeEscpecialidade)
 VALUES ('Acupultura') ,('Anestesiologia'),('Angiologia'),('Cardiologia'),('Cirurgia Cardiovascular'),('Cirurgia da Mão'),('Cirurgia do Aparelho Digestivo'),('Cirurgia Geral'),('Cirurgia Pediatrica'),('Cirurgia Plástica'),('Cirurgia Torácica'),('Cirurgia Vascula'),('Dermatologia'),('Radioterapia'),('Urologia'),('Pediatria'),('Psiquiatria')
 GO
 
-INSERT INTO MEDICO(idClinica,idEspecialidade,idUsuario,Nome,CRM)
-VALUES (1,2,8,'Ricardo Lemos','54356-SP'),(1,17,9,'Roberto Possarle','53452-SP'),(1,16,10,'Helena Strada','65463-SP')
+/*INSERT INTO MEDICO(idClinica,idEspecialidade,idUsuario,Nome,CRM)
+VALUES (1,2,8,'Ricardo Lemos','54356-SP'),(1,17,9,'Roberto Possarle','53452-SP'),(1,16,10,'Helena Strada','65463-SP'), (1,16,10,'Rodrigo Santoro','64463-SP')
+GO*/
+
+INSERT INTO MEDICO(idClinica,idEspecialidade,idTipoUsuario,Nome,Email,Senha,CRM)
+VALUES (1,2,3,'Ricardo Lemos','ricardo.lemos@spmedicalgroup.com.br','12345678','54356-SP'),(1,17,3,'Roberto Possarle','roberto.possarle@spmedicalgroup.com.br','12345678','53452-SP'),(1,16,3,'Helena Strada','helena.souza@spmedicalgroup.com.br','12345678','65463-SP'), (1,12,3,'Rodrigo Santoro','rodrigo.seantoro@spmedicalgroup.com.br','12345678','64463-SP')
 GO
 
 INSERT INTO USUARIO(idTipoUsuario,idEndereco,Nome,Email,Senha,DataNascimento,Telefone, Rg,CPF)

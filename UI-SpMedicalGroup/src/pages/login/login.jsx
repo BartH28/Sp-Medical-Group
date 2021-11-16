@@ -32,9 +32,9 @@ export default function Login(){
                     console.log(base64)
 
                     if (usuarioAutenticado() && parseJwt().role === '2') {
-                        history.push('/')
-                    }else {
                         history.push('/consultas')
+                    }else {
+                        history.push('/adm')
                     }
                 }
             })

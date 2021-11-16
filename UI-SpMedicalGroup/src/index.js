@@ -20,7 +20,18 @@ const Permissaoadm = ({ component : Component}) => (
     usuarioAutenticado() && parseJwt().role === '1' ? (
       <Component {...props} />
     ) : (
-      <Redirect to="login" />
+      <Redirect to="/login" />
+    )
+  }
+  />
+);
+const Permissaomed= ({ component : Component}) => (
+  <Route 
+  render={(props) =>
+    usuarioAutenticado() && parseJwt().role === '3' ? (
+      <Component {...props} />
+    ) : (
+      <Redirect to="/loginmed" />
     )
   }
   />
@@ -35,10 +46,10 @@ const routing = (
         <Route path="/login" component={Login} />
         <Route path="/loginMed" component={LoginMed} />
         <Route path="/consultas" component={minhasConsultas} />
-        <Route path="/adm" component={Administracao}/>
+        <Permissaoadm path="/adm" component={Administracao}/>
         <Route path="/notFound" component={notFound}/>
-        <Route path="/consultasadm" component={ConsultasAdm}/>
-        <Route path="/medico" component={MinhasConsultasMed}/>
+        <Permissaoadm path="/consultasadm" component={ConsultasAdm}/>
+        <Permissaomed path="/medico" component={MinhasConsultasMed}/>
         <Redirect to="/notFound"/>
       </Switch>
     </div>
