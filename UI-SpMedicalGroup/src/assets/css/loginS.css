@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
+
+:root {
+    --verde: #8AE697;
+    --azul: #83BEDF;
+  }
+
+*{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+
+    overflow-x: none;
+}
+
+.img-login{
+    height:  99.69418960244649vh;
+    /* height: 1008px; */
+    width: 36.9692532942899vw; 
+    /* max-height: ; */ 
+    object-fit: cover;
+    object-position: right;
+}
+
+.img-login-U{
+    height: 99.69418960244649vh;
+    /* height: 1008px; */
+    width: 50.969253vw;     
+    /* max-height: ; */ 
+    object-fit: cover;
+    /* object-position: right; */
+    /* background-color: black; */
+    clip-path: polygon(37%   0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.main_login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 130%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+} 
+
+.container-form{
+    /* margin-right: 22.675vw; */
+    width: 259px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 100px; */
+    scale: 1;
+}
+
+.container-form-Usuario{
+    /* margin-left: 32.675vw    ; */
+    width: 259px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 100px; */
+    scale: 1;
+}
+
+.logo-form{
+    margin-top: 30px;
+    width: 109px;
+    height: 120px;
+}
+
+form input{
+    color: black;
+    background-color: transparent;
+    /* border: none; */
+    border-style: none;
+    border-bottom: 1px solid #C4C4C4;
+    width: 305px;
+    margin-bottom: 20px;
+    padding: 10px;
+    transition: scale 0.2s ease-in-out;
+}
+
+
+input:focus{
+    
+    scale: 1.1;
+   
+}
+
+.cor{
+    color: var(--verde);
+}
+
+.Esqueceu-Span{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.btn_login{
+    margin-top: 50px;
+    background-color: var(--azul);
+    border-style: none;
+    border-radius: 89px;
+    height: 29px;
+    width: 79px; 
+    color: white;   
+    transition: background-color 0.4s ease-in-out;
+}
+
+.btn_login:hover{
+    background-color:  var(--verde);
+}
+
+a{
+    text-decoration: none;
+}
+
+span{
+    color: var(--verde);
+}
+
+.BemVindo-span{
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 1329px) {
+    *{
+        overflow-x: none;
+    }
+    
+    .img-login{
+        display: none;
+    }
+    .img-login-U{
+        display: none;
+    }
+
+    .container-form-Usuario{
+        margin: 0px;
+    }
+    .container-form{
+        margin: 0px;
+    }
+
+    main{
+        
+        justify-content: center;
+        
+        
+        height: 626px;
+    }
+}

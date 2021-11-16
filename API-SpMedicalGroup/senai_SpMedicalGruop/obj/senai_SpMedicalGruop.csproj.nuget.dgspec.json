@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj": {}
+    "D:\\sprepository\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj": {
+    "D:\\sprepository\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
+        "projectUniqueName": "D:\\sprepository\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
         "projectName": "senai_SpMedicalGruop",
-        "projectPath": "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
-        "packagesPath": "C:\\Users\\50742583830\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\50742583830\\Documents\\spmd\\API-SpMedicalGroup\\senai_SpMedicalGruop\\obj\\",
+        "projectPath": "D:\\sprepository\\API-SpMedicalGroup\\senai_SpMedicalGruop\\senai_SpMedicalGruop.csproj",
+        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
+        "outputPath": "D:\\sprepository\\API-SpMedicalGroup\\senai_SpMedicalGruop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\50742583830\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

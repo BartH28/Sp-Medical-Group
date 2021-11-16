@@ -87,7 +87,7 @@ namespace senai_SpMedicalGruop.Repositories
 
         public List<Consultum> ListarTodos()
         {
-            return ctx.Consulta.ToList();
+            return ctx.Consulta.Include(c => c.IdMedicoNavigation).Include(c => c.IdUsuarioNavigation).Include(c => c.IdSituacaoNavigation).ToList();
         }
 
         public List<Consultum> ListarMinhasMed(int idMedico)

@@ -1,4 +1,4 @@
-USE SP_MEDICAL_GROUP_H
+USE SP_MEDICAL_GROUP
 SELECT * FROM CLINICA
 SELECT * FROM CONSULTA
 SELECT * FROM ENDERECO
@@ -21,3 +21,5 @@ GO
 
 select convert(varchar, DataConsulta, 113) AS Data FROM CONSULTA
 select convert(varchar, DataConsulta, 0) AS Data FROM CONSULTA
+
+

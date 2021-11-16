@@ -1,0 +1,11 @@
+.main_notFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p_notfound{
+    font-size: 50px;
+    color: black    ;
+    margin-top: 300px;
+}

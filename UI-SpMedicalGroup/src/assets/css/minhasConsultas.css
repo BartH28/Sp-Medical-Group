@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --verde: #8ae696;
+    --verdeEscuro: #51B45F;
+    --azul: #83BEDF;
+}
+
+*{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.container_main{
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Container_Consulta{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 10%;
+    height: 370px;
+    width: 400px;
+    background-color: var(--verde);
+    /* border: 10px slid var(--azul); */
+    box-shadow: 4px 4px #00000042;
+    
+}
+
+.Container_legends{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 365px;
+    width: 300px;
+    margin-top: 5px;
+}
+
+.legenda_consu{
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    text-align: justify;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px #0000007c;
+    height: 60px;   
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgwhite{
+    box-shadow: 4px 4px #54535341;
+    color: var(--azul);
+    background-color: white;
+    border-radius: 10%;
+    overflow-y: scroll;
+    padding: 10px   ;
+    text-shadow: none;
+}

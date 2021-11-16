@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --verde: #8ae696;
+    --verdeEscuro: #51B45F;
+    --azul: #83BEDF;
+}
+
+.mainCons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.sec_table{
+    height: auto;
+    width: 70%;
+}
+
+.table_main {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid var(--verde) ; */
+    border-collapse: separate;
+    border-spacing: 70px;
+    background-color: var(--azul);
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.th_main_tb {
+    border-bottom: 5px solid var(--verde);
+}
+
+.td_main_tb {
+    text-align: center;
+}
+
+.fomr_consu {
+    
+    background-color: var(--verde);
+    padding: 30px;
+}
+
+label {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #0000007c;
+}
+
+.btn_cadastrar {
+    background-color: var(--azul);
+    border: 1px solid;
+    border-radius: 10%;
+    height: 40px;
+    width: 90px;
+    font-size: 15px;
+    font-family: 'Work Sans', sans-serif;
+    text-shadow: 2px 2px #00000035;
+    transition: scale 0.3s ease-in-out;
+}
+
+.btn_cadastrar:hover {
+    scale: 1.08;
+}
+
+.input_form{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+.input_form::placeholder{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+}
+
+select{
+    margin-bottom: 10px;
+}
+
+.sec_cad{
+    margin-top: 25px;
+    width: 250px;
+    height: 80%;
+}
+
+.input_data{
+    scale: 0.7;
+}
+
+
+select{
+    background-color: var(--azul);
+    border: 1px solid white;
+    
+}
+
+.marg_btn{
+    scale: 0.8;
+}
+
+.bgAzul{
+    font-weight: bolder;
+    color: var(--azul);
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+    background-color: white;
+}
