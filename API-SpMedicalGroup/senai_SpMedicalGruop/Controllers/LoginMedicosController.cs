@@ -37,7 +37,8 @@ namespace senai_SpMedicalGruop.Controllers
             {
                 new Claim(JwtRegisteredClaimNames.Email, medicoBuscado.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, medicoBuscado.IdMedico.ToString()),
-                new Claim(ClaimTypes.Role, medicoBuscado.IdTipoUsuarioNavigation.NomeTipo)
+                new Claim(ClaimTypes.Role, medicoBuscado.IdTipoUsuarioNavigation.NomeTipo),
+                new Claim( "role", medicoBuscado.IdTipoUsuario.ToString() )
             };
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("SPMedico-Authentication-Key"));
 

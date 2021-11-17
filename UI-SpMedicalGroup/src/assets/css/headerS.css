@@ -139,9 +139,11 @@ body {
 .logo_Header {
     margin-top: 10px;
     margin-left: 10px;
+    margin-right: 13px;
     /* scale: 0.4; */
     transform: scale(0.8);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .logo_Header:hover {
@@ -152,46 +154,7 @@ body {
     display: none;
 }
 
-.bmBurgerButton {
-    position: fixed;
-    width: 36px;
-    height: 30px;
-    left: 36px;
-    top: 65px;
-  }
-
-  .bmBurgerBars {
-    background: #83BEDF
-  }
-
-  .bmCrossButton {
-    height: 24px;
-    width: 24px;
-  }
-
-  .bmCross {
-    background: var(--azul);
+.dot a {
+    display: initial;
 }
-.bmMenuWrap {
-    position: fixed;
-    height: '100%'
-  }
 
-  .bmMenu {
-    background: #83BEDF;
-    padding: 2.5em 1.5em 0;
-    font-Size: 1.15em;
-  }
-
-  .bmOverlay {
-      overflow-x: hidden;  
-      /* background: 'rgba(0, 0, 0, 0.3)'; */
-    }
-
-    .bmMorphShape {
-        fill: #373a47
-    } 
-
-    .react-burger-menu-btn{
-        background: #83BEDF;
-    }

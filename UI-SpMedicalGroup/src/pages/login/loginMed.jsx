@@ -32,9 +32,9 @@ export default function LoginMed(){
                     console.log(base64)
 
                     if (usuarioAutenticado() && parseJwt().role === '3') {
-                        history.push('/')
-                    }else {
                         history.push('/medico')
+                    }else {
+                        history.push('/')
                     }
                 }
             })

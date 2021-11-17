@@ -64,16 +64,16 @@ export default function Header() {
         <header>
             <div className="header-bg">
                 <nav className='nav-header'>
-                    <Menu  className="bmBurgerButton bmBurgerBars bmCrossButton bmCross bmMenuWrap bmMen ">
+                    {/* <Menu  > */}
 
                         <Link className="links_h" to="/medico">Medico</Link>
                         <Link className="links_h" to="/consultas">Consultas</Link>
 
                         <Link className="links_h" to="/adm">Administração</Link>
-                    </Menu>
+                    {/* </Menu> */}
 
 
-                    <span className="dot"><img className="logo_Header" onClick={goHome} src={logo} alt="Logo do Sp Medical Group" /></span>
+                    <span className="dot"><Link  to="/"><img className="logo_Header" src={logo} alt="Logo do Sp Medical Group" /></Link></span>
                 </nav>
                 <nav className="nav-headerB">
                     {
