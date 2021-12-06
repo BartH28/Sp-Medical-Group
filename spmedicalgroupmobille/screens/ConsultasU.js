@@ -13,12 +13,16 @@ import {
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+import { useNavigation } from '@react-navigation/native';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import api from '../services/api';
 
 export default function Consultas() {
 
     const [listaConsul, setLC] = useState([])
+
+    const nav = useNavigation()
 
     async function buscarConsul() {
         const token = await AsyncStorage.getItem('TokenU')
@@ -35,6 +39,18 @@ export default function Consultas() {
         }
     }
 
+    async function Logout(){
+
+        try {
+            await AsyncStorage.removeItem('TokenU')
+            nav.navigate('Login')
+            
+        } catch (error) {
+            throw error
+        }
+       
+    }
+
     useEffect(buscarConsul, [])
     // useEffect(() => getResponse())
 
@@ -44,9 +60,9 @@ export default function Consultas() {
         return (
             <View style={styles.ConsultaU}>
                 <Text style={styles.NumeroC} >Consulta #{item.idConsulta}</Text>
-                <Text>{item.idMedicoNavigation.nome}</Text>
-                <Text>{item.idSituacaoNavigation.descrição}</Text>
-                <Text>{Intl.DateTimeFormat("pt-BR", {
+                <Text style={styles.textC}>{item.idMedicoNavigation.nome}</Text>
+                <Text style={styles.textC}>{item.idSituacaoNavigation.descrição}</Text>
+                <Text style={styles.textC}>{Intl.DateTimeFormat("pt-BR", {
                     year: 'numeric', month: 'short', day: 'numeric',
                     hour: 'numeric', minute: 'numeric', hour12: true
                 }).format(new Date(item.dataConsulta))}</Text>
@@ -63,6 +79,12 @@ export default function Consultas() {
             ListHeaderComponent={
                 <>
                     <View style={styles.HeaderCon}>
+                        <TouchableOpacity
+                            style={styles.btnLogin}
+                            onPress={Logout}
+                        >
+                            <Text>Logout</Text>
+                        </TouchableOpacity>
                         <Image style={styles.imgLogoCons} source={require('../assests/LogoSpConsul.png')} />
                     </View>
                 </>
@@ -87,7 +109,8 @@ const styles = StyleSheet.create({
 
         alignItems: 'center',
         // justifyContent: 'center',
-        backgroundColor: 'rgba(138,230,151, 1)'
+        backgroundColor: 'rgba(138,230,151, 1)',
+
     },
     // container2: {
     //     flex: 1,
@@ -101,8 +124,9 @@ const styles = StyleSheet.create({
         width: 411,
         height: 100
         , backgroundColor: 'rgba(126,212,148, 1)',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
+        flexDirection:'row'
         // position: 'absolute'
     },
     imgLogoCons: {
@@ -119,13 +143,44 @@ const styles = StyleSheet.create({
         marginTop: 40,
         marginBottom: 22,
         alignItems: 'center',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-evenly',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 1,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+
+        elevation: 7,
 
     },
     NumeroC: {
         color: 'white',
         fontFamily: 'Work Sans',
         fontWeight: 'bold',
-        fontSize: 23
-    }
+        fontSize: 23,
+        textShadowColor: 'rgba(0, 0, 0, 0.75)',
+        textShadowOffset: { width: 2, height: 3 },
+        textShadowRadius: 1
+    },
+    textC: {
+        color: 'white',
+        fontFamily: 'Work Sans',
+        fontWeight: 'bold',
+        fontSize: 15,
+        textShadowColor: 'rgba(0, 0, 0, 0.75)',
+        textShadowOffset: { width: 1, height: 2 },
+        textShadowRadius: 1
+    },
+    btnLogin:{
+        // marginTop: 57,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'rgba(131,190,223, 1)',
+        width: 80,
+        height: 28,
+        borderRadius: 89,
+ 
+    },
 });

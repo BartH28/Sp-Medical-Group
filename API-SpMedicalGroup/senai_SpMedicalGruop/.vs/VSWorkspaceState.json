@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controllers",
+    "\\Repositories"
   ],
-  "SelectedNode": "\\senai_SpMedicalGruop.csproj.user",
+  "SelectedNode": "\\Controllers\\ConsultasController.cs",
   "PreviewInSolutionExplorer": false
 }

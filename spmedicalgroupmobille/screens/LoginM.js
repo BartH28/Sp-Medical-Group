@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect }  from 'react';
+import React, { Component, useState, useEffect, useContext }  from 'react';
 import {
 
   StyleSheet,
@@ -16,20 +16,22 @@ import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import api from '../services/api'
+import AppContext from '../Component/AppContext'
 
 
 
-export default function Login(){
-    const[ emailU, setEmail] = useState('alexandre@gmail.com')
-    const[ senhaU, setSenha] = useState('12345678')
+export default function loginM(){
+    const myContext = useContext(AppContext)
+    // const[ emailU, setEmail] = useState('')
+    // const[ senhaU, setSenha] = useState('')
 
     const nav = useNavigation()
 
     async function  efetuarLogin(){
 
-        const resp = await api.post('/Login', {
-            email: emailU,
-            senha: senhaU
+        const resp = await api.post('/LoginsMedicos/Login', {
+            email: myContext.email,
+            senha: myContext.senha
         })
 
         const token = resp.data.token;
@@ -44,41 +46,32 @@ export default function Login(){
 
     } 
 
-     function logMed(){
-         try {
-             
-             nav.navigate('LoginM')
-         } catch (error) {
-             console.warn(error)
-             throw error
-         }
-    }
-
-   
     return(
             
             <View style={styles.container}>
+                <View>
+                
+            </View>
                 <Image style={styles.imgLogin} source={require('../assests/logoLogin.png')}/>
-                <Text style={styles.textLogin} >Bem-vindo, Usuario</Text>
+                <Text style={styles.textLogin} >Bem-vindo, Medico</Text>
                 <TextInput style={styles.inputLogin}
                 placeholder="Email" placeholderTextColor='rgba(196,196,196, 1)'
                 keyboardType="email-address"
-                onChangeText={() => setEmail}
+                onChangeText={() => myContext.setEmail}
                 />
                 <TextInput style={styles.inputLogin}
                 placeholder="Senha" placeholderTextColor='rgba(196,196,196, 1)'
                 keyboardType="default"
                 secureTextEntry={true} 
-                onChangeText={() => setSenha}
+                onChangeText={() => myContext.setSenha}
                 />
-                    <View>    
-                        <TouchableOpacity
-                            onPress={logMed}
-                        >
 
-                        <Text style={styles.textLogin2} >Voce é medico? {"\n"}    Clique Aqui</Text>
-                        </TouchableOpacity>
-                    </View>
+                <TouchableOpacity
+                    onPress={nav.navigate('Login')}
+                >
+
+                <Text style={styles.textLogin2} >Logar como Usario? {"\n"}    Clique Aqui</Text>
+                </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.btnLogin}
