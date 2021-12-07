@@ -21,27 +21,31 @@ import AppContext from '../Component/AppContext'
 
 
 export default function loginM(){
-    const myContext = useContext(AppContext)
-    // const[ emailU, setEmail] = useState('')
-    // const[ senhaU, setSenha] = useState('')
+    // const myContext = useContext(AppContext)
+    const[ emailM, setEmail] = useState('helena.souza@spmedicalgroup.com.br')
+    const[ senhaM, setSenha] = useState('12345678')
 
     const nav = useNavigation()
 
     async function  efetuarLogin(){
 
         const resp = await api.post('/LoginsMedicos/Login', {
-            email: myContext.email,
-            senha: myContext.senha
+            email: emailM,
+            senha: senhaM
         })
 
         const token = resp.data.token;
-        await AsyncStorage.setItem('TokenU', token);
+        await AsyncStorage.setItem('TokenM', token);
 
         if (resp.status == 200) {
-            // console.warn(token)
-            nav.navigate('Consultas')
+            console.warn(token)
+            nav.navigate('ConsultasMed')
+            setSenha('')
+            setEmail('')
 
         }
+
+
 
 
     } 
@@ -57,20 +61,22 @@ export default function loginM(){
                 <TextInput style={styles.inputLogin}
                 placeholder="Email" placeholderTextColor='rgba(196,196,196, 1)'
                 keyboardType="email-address"
-                onChangeText={() => myContext.setEmail}
+                value={emailM}
+                onChangeText={(campo) => setEmail(campo)}
                 />
                 <TextInput style={styles.inputLogin}
                 placeholder="Senha" placeholderTextColor='rgba(196,196,196, 1)'
                 keyboardType="default"
+                value={senhaM}
                 secureTextEntry={true} 
-                onChangeText={() => myContext.setSenha}
+                onChangeText={(campo) => setSenha(campo)}
                 />
 
                 <TouchableOpacity
-                    onPress={nav.navigate('Login')}
+                    onPress={nav.goBack}
                 >
 
-                <Text style={styles.textLogin2} >Logar como Usario? {"\n"}    Clique Aqui</Text>
+                <Text style={styles.textLogin2} >Logar como Usuario? {"\n"}          Clique Aqui</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity

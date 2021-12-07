@@ -10,6 +10,7 @@ import login from './screens/Login'
 import loginM from './screens/LoginM';
 import Main from './screens/Main'
 import AppContext from './Component/AppContext';
+import ConsultasMed from './screens/ConsultasM';
 
 
 const AuthStack = createStackNavigator(); 
@@ -33,17 +34,17 @@ export default function Stack() {
         />
 
         <AuthStack.Navigator
-          initialRouteName="Login"
+          initialRouteName="Main"
 
           screenOptions={{
             headerShown: false,
           }}
         >
           <AuthStack.Screen name="Login" component={login} />
-          {/* <AuthStack.Screen name="Main" component={Main} /> */}
+          <AuthStack.Screen name="Main" component={Main} />
           <AuthStack.Screen name="LoginM" component={loginM} />
           <AuthStack.Screen name="Consultas" component={Consultas} /> 
-          {/* <AuthStack.Screen name="ConsultasMed" component={ConsultasMed} />  */}
+          <AuthStack.Screen name="ConsultasMed" component={ConsultasMed} /> 
 
         </AuthStack.Navigator>
       </NavigationContainer>

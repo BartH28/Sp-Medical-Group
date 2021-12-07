@@ -16,7 +16,7 @@ export default function ConsultasAdm() {
     const [loading, setLoading] = useState(false)
 
     function buscarConsultasadm() {
-        axios('http://localhost:5000/api/Consultas/todas',
+        axios('http://192.168.5.154:5000/api/Consultas/todas',
             {
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
@@ -44,7 +44,7 @@ export default function ConsultasAdm() {
             idsituacao : idsituacao
         }
 
-        axios.post('http://localhost:5000/api/Consultas/agendamento', evento, {
+        axios.post('http://192.168.5.154:5000/api/Consultas/agendamento', evento, {
             headers: {
                 Authorization : 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -64,7 +64,7 @@ export default function ConsultasAdm() {
     }
 
     function buscarMedicos() {
-        axios('http://localhost:5000/api/Medicos', {
+        axios('http://192.168.5.154:5000/api/Medicos', {
             headers: {
                 Authorization : 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -82,7 +82,7 @@ export default function ConsultasAdm() {
     useEffect(buscarMedicos, [])
 
     function buscarPacientes() {
-        axios('http://localhost:5000/api/Usuarios/', {
+        axios('http://192.168.5.154:5000/api/Usuarios/', {
             headers: {
                 Authorization : 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -99,6 +99,8 @@ export default function ConsultasAdm() {
 
     useEffect(buscarPacientes, [])
 
+//     var s = $("#startDate").val();
+// var startDate = new Date(s.replace(/-/g,'/').replace('T',' '));
 
 
     return (

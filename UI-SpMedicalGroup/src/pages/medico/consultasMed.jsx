@@ -12,7 +12,7 @@ export default function MinhasConsultasMed() {
     const [idConsu, setIdCons] = useState('')
 
     function buscarConsultamed() {
-        axios('http://localhost:5000/api/Consultas/minhasmed', {
+        axios('http://192.168.5.154:5000/api/Consultas/minhasmed', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -36,7 +36,7 @@ export default function MinhasConsultasMed() {
 
        
 
-        axios.patch('http://localhost:5000/api/Consultas/descricao/' + idConsu, descricao ,{
+        axios.patch('http://192.168.5.154:5000/api/Consultas/descricao/' + idConsu, descricao ,{
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }

@@ -10,7 +10,7 @@ export default function MinhasConsultas() {
     const [ListaMinhaConsultas, setLMC] = useState([])
 
     function buscarConsulta() {
-        axios('http://localhost:5000/api/Consultas/minhas', {
+        axios('http://192.168.5.154:5000/api/Consultas/minhas', {
             headers : {
                 'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
             }

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <main className="main_adm">
         <div class="main_container ">
           <div class="main_Selector"><Link to='/loginmed'> Login Medico </Link> </div>

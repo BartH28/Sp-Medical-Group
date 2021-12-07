@@ -158,3 +158,17 @@ body {
     display: initial;
 }
 
+@media only screen and (max-width: 768px) {
+
+    .header-bg{
+        flex-direction: column;
+        margin-top: 0px;
+        background-image: none;
+        height: 100px;
+        display: inline-block;
+    }
+    .dot{
+        display: none; 
+    }
+
+}

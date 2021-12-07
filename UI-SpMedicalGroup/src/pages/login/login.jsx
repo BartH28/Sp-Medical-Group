@@ -21,7 +21,7 @@ export default function Login(){
         setLoading(true)
         setErrorMsg('')
 
-        axios.post('http://localhost:5000/api/Login',{email: email,senha: senha})
+        axios.post('http://192.168.5.154:5000/api/Login',{email: email,senha: senha})
         .then((r)=> {
                 if (r.status === 200) {
                     localStorage.setItem('usuario-login', r.data.token);

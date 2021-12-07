@@ -61,6 +61,10 @@ export default function Consultas() {
             <View style={styles.ConsultaU}>
                 <Text style={styles.NumeroC} >Consulta #{item.idConsulta}</Text>
                 <Text style={styles.textC}>{item.idMedicoNavigation.nome}</Text>
+                {
+                    item.descricao !== null && <Text style={styles.textC}>{item.descricao}</Text> 
+                }
+                
                 <Text style={styles.textC}>{item.idSituacaoNavigation.descrição}</Text>
                 <Text style={styles.textC}>{Intl.DateTimeFormat("pt-BR", {
                     year: 'numeric', month: 'short', day: 'numeric',

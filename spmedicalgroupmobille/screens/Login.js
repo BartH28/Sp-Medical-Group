@@ -38,6 +38,8 @@ export default function Login(){
         if (resp.status == 200) {
             // console.warn(token)
             nav.navigate('Consultas')
+            setEmail('')
+            setSenha('')
 
         }
 
@@ -63,13 +65,16 @@ export default function Login(){
                 <TextInput style={styles.inputLogin}
                 placeholder="Email" placeholderTextColor='rgba(196,196,196, 1)'
                 keyboardType="email-address"
-                onChangeText={() => setEmail}
+                value={emailU}
+                onChangeText={(c) => setEmail(c)}
                 />
                 <TextInput style={styles.inputLogin}
                 placeholder="Senha" placeholderTextColor='rgba(196,196,196, 1)'
                 keyboardType="default"
                 secureTextEntry={true} 
-                onChangeText={() => setSenha}
+                value={senhaU}
+
+                onChangeText={(c) => setSenha(c)}
                 />
                     <View>    
                         <TouchableOpacity
