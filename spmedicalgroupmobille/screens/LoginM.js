@@ -22,8 +22,8 @@ import AppContext from '../Component/AppContext'
 
 export default function loginM(){
     // const myContext = useContext(AppContext)
-    const[ emailM, setEmail] = useState('helena.souza@spmedicalgroup.com.br')
-    const[ senhaM, setSenha] = useState('12345678')
+    const[ emailM, setEmail] = useState('')
+    const[ senhaM, setSenha] = useState('')
 
     const nav = useNavigation()
 
