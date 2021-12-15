@@ -16,7 +16,7 @@ export default function Administracao() {
                 </div>
                 <div class="main_container ">
                     <div class="main_Selector">Clinicas</div>
-                    <div class="main_Selector">Endereços</div>
+                    <div class="main_Selector"><Link to='/localizacao'> Localizacões </Link> </div>
                 </div>
 
             </main>

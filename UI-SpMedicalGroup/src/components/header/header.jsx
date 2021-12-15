@@ -3,65 +3,65 @@ import logo from "../../assets/img/logo_spmedgroup_v1 2.png"
 import { Link, useHistory } from "react-router-dom"
 import "../../assets/css/headerS.css"
 import { parseJwt, usuarioAutenticado } from "../../Services/auth"
-import { slide as Menu } from 'react-burger-menu'
+// import { slide as Menu } from 'react-burger-menu'
 
 export default function Header() {
-    const _history = useHistory
+    // const _history = useHistory
 
-    function goHome() {
+    // function goHome() {
 
 
-        _history.push('/')
-    }
+    //     _history.push('/')
+    // }
 
-    var styles = {
-        bmBurgerButton: {
-          position: 'fixed',
-          width: '36px',
-          height: '30px',
-          left: '36px',
-          top: '65px'
-        },
-        bmBurgerBars: {
-          background: '#83BEDF'
-        },
-        bmBurgerBarsHover: {
-          background: '#a90000'
-        },
-        bmCrossButton: {
-          height: '24px',
-          width: '24px'
-        },
-        bmCross: {
-          background: '#bdc3c7'
-        },
-        bmMenuWrap: {
-          position: 'fixed',
-          height: '100%'
-        },
-        bmMenu: {
-          background: '#83BEDF',
-          padding: '2.5em 1.5em 0',
-          fontSize: '1.15em'
-        },
-        // bmMorphShape: {
-        //   fill: '#373a47'
-        // },
-        bmItemList: {
-          color: '#b8b7ad',
-          padding: '0.8em'
-        },
-        bmItem: {
-          display: 'flex'
-        },
-        bmOverlay: {
-        //   overflox-x: 'hidden',  
-          background: 'rgba(0, 0, 0, 0.3)'
-        }
-      } 
+    // var styles = {
+    //     bmBurgerButton: {
+    //       position: 'fixed',
+    //       width: '36px',
+    //       height: '30px',
+    //       left: '36px',
+    //       top: '65px'
+    //     },
+    //     bmBurgerBars: {
+    //       background: '#83BEDF'
+    //     },
+    //     bmBurgerBarsHover: {
+    //       background: '#a90000'
+    //     },
+    //     bmCrossButton: {
+    //       height: '24px',
+    //       width: '24px'
+    //     },
+    //     bmCross: {
+    //       background: '#bdc3c7'
+    //     },
+    //     bmMenuWrap: {
+    //       position: 'fixed',
+    //       height: '100%'
+    //     },
+    //     bmMenu: {
+    //       background: '#83BEDF',
+    //       padding: '2.5em 1.5em 0',
+    //       fontSize: '1.15em'
+    //     },
+    //     // bmMorphShape: {
+    //     //   fill: '#373a47'
+    //     // },
+    //     bmItemList: {
+    //       color: '#b8b7ad',
+    //       padding: '0.8em'
+    //     },
+    //     bmItem: {
+    //       display: 'flex'
+    //     },
+    //     bmOverlay: {
+    //     //   overflox-x: 'hidden',  
+    //       background: 'rgba(0, 0, 0, 0.3)'
+    //     }
+    //   } 
 
     return (
-        <header>
+        <header className="z-index">
             <div className="header-bg">
                 <nav className='nav-header'>
                     {/* <Menu  > */}

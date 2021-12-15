@@ -6,7 +6,7 @@ import '../../assets/css/loginS.css'
 import '../../assets/css/reset.css'
 // import imgLogin from '../../assets/img/pexels-jonathan-borba-3259624 1.png'
 import imgForm from '../../assets/img/logo_spmedgroup_v1 2.png'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 // import { isFlowDeclaration } from '@babel/types'
 
 export default function LoginMed(){
@@ -49,6 +49,7 @@ export default function LoginMed(){
 
     return(
         <div>
+             <div className="container_btnOut"> <button className="btn_login_L" ><Link className="links_h" to="/">Sair</Link></button> </div>
             <main className="main_login">
                 <div className="container-form marginLogmed">
                     <img className="logo-form" src={imgForm} alt="logo sp medical group" />

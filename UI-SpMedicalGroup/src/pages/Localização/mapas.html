@@ -26,7 +26,7 @@
     <div id="map"></div>
 
     <script>
-        fetch('http://localhost:5000/api/Localizacao')
+        fetch('http://192.168.5.154:5000/api/Localizacao')
             .then(resposta => resposta.json())
             .then(itens => montarMapa(itens))
             .catch(error => console.log(error))

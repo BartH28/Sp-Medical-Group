@@ -49,6 +49,11 @@ main{
     align-items: center;
 }
 
+.container_btnOut{
+    position: absolute;
+    left: 3vw;
+}
+
 form{
     display: flex;
     flex-direction: column;

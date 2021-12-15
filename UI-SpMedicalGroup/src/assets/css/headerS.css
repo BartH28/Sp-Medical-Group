@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+.z-index{
+    z-index: 3;
+}
+
 .header-bg {
     height: 78px;
     width: 100%;

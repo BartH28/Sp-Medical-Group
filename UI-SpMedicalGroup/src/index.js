@@ -13,7 +13,7 @@ import notFound from './pages/notFound/notFound';
 import ConsultasAdm from './pages/Consultas/consultasadm';
 import MinhasConsultasMed from './pages/medico/consultasMed';
 import LoginMed from './pages/login/loginMed';
-import Map from './pages/Localização/localizacao'
+import MapContainer from '../src/pages/Localização/localização1'
 
 const Permissaoadm = ({ component : Component}) => (
   <Route 
@@ -48,7 +48,7 @@ const routing = (
         <Route path="/loginMed" component={LoginMed} />
         <Route path="/consultas" component={minhasConsultas} />
         <Permissaoadm path="/adm" component={Administracao}/>
-        <Permissaoadm path="/localizacao" component={Map}/>
+        <Permissaoadm path="/localizacao" component={MapContainer}/>
         <Route path="/notFound" component={notFound}/>
         <Permissaoadm path="/consultasadm" component={ConsultasAdm}/>
         <Permissaomed path="/medico" component={MinhasConsultasMed}/>

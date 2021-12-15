@@ -43,7 +43,7 @@ namespace senai_SpMedicalGruop
                     options.AddPolicy("CorsPolicy",
                                     builder =>
                                     {
-                                        builder.WithOrigins("null")
+                                        builder.WithOrigins("*")
                                         .AllowAnyHeader()
                                         .AllowAnyMethod();
                                     });
