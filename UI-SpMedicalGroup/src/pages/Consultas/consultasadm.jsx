@@ -16,7 +16,7 @@ export default function ConsultasAdm() {
     const [loading, setLoading] = useState(false)
 
     function buscarConsultasadm() {
-        axios('http://192.168.5.154:5000/api/Consultas/todas',
+        axios('https://62055897161670001741b963.mockapi.io/USUARIO/1/CONSULTA',
             {
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
@@ -44,7 +44,7 @@ export default function ConsultasAdm() {
             idsituacao : idsituacao
         }
 
-        axios.post('http://192.168.5.154:5000/api/Consultas/agendamento', evento, {
+        axios.post('http://192.168.4.240:5000/api/Consultas/agendamento', evento, {
             headers: {
                 Authorization : 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -64,7 +64,7 @@ export default function ConsultasAdm() {
     }
 
     function buscarMedicos() {
-        axios('http://192.168.5.154:5000/api/Medicos', {
+        axios('http://192.168.4.240:5000/api/Medicos', {
             headers: {
                 Authorization : 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -82,7 +82,7 @@ export default function ConsultasAdm() {
     useEffect(buscarMedicos, [])
 
     function buscarPacientes() {
-        axios('http://192.168.5.154:5000/api/Usuarios/', {
+        axios('http://192.168.4.240:5000/api/Usuarios/', {
             headers: {
                 Authorization : 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -127,9 +127,9 @@ export default function ConsultasAdm() {
                                     return(
                                         <tr key={consultas.idConsulta}>
                                             <td>{consultas.idConsulta}</td>
-                                            <td>{consultas.idMedicoNavigation.nome}</td>
-                                            <td>{consultas.idUsuarioNavigation.nome}</td>
-                                            <td>{consultas.idSituacaoNavigation.descrição}</td>
+                                            <td>{consultas.idMedicoNavigation[0].nome}</td>
+                                            <td>{consultas.idUsuarioNavigation[0].nome}</td>
+                                            <td>{consultas.idSituacaoNavigation[0].descrição}</td>
                                             <td>{consultas.descricao}</td>
                                             <td>{
                                             Intl.DateTimeFormat("pt-BR", {

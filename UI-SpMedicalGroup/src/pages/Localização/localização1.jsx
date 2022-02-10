@@ -16,7 +16,7 @@ class Maps extends Component {
     };
 
     BuscarLocalizacoes = () => {
-        axios("http://192.168.5.154:5000/api/Localizacao", {
+        axios("http://192.168.4.240:5000/api/Localizacao", {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -81,5 +81,6 @@ class Maps extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: ("AIzaSyDBAKlR7YNlROT-q03Ra_Qpl_n_NiQRmdQ")
+    apiKey: ("AIzaSyCpayHP2QP9ydgW0B6iMnPGMWo38bkfsS0")
 })(Maps)
+// apiKey: ("AIzaSyDBAKlR7YNlROT-q03Ra_Qpl_n_NiQRmdQ")
